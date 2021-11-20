@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main-page.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div class="div">
+        <div class="name-box">
+            <%=user_rows[0].name%>
+        </div>
+        <div class="main-box">
+            <section class="nav">
+                <nav>
+                    <ul>
+                        <li><form action="/post" method="post">
+                            <input type="submit" value="새글작성"/>
+                        </form></li>
+                        <li><form action="/setting" method="post">
+                            <input type="submit" value="계정설정"/>
+                        </form></li>
+                        <li>
+                            <form action="/logout" method="post">
+                                <input type="submit" class="logout" value="로그아웃"/>
+                            </form>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+            <section class="posts">
+                <%if(post_rows.length >= 1){%>
+                <%for(var i = post_rows.length-1; i >= 0; i--){
+                    %>
+                <article class="post-article">
+                    <div class="post-titles">
+                        <span class="post-title"><%=post_rows[i].postTitle%></span>
+                        <img src="/img/expand_arrow_24px.png" alt="">
+                    </div>
+                    <span class="post-content">
+                        <%-(post_rows[i].postContent)%>
+                        
+                        <span class="post-name"></span>
+                    </span>
+                </article>
+                    <%}
+                }%>
+            </section>
+            
+        </div>
+    </div>
+
+<!--
+    <span class="title">Hello!</span>
+    <%=user_rows[0].name%> <br>
+        
+    <form action="/logout" method="post">
+        <input type="submit" class="btn" value="로그아웃"/>
+    </form><br>
+    <%for(var i = 0; i < post_rows.length; i++){
+        %>
+      asd  
+    <%}%>-->
+</body>
+</html>

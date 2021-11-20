@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youngs Login</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/signup_main.js"></script>
+</head>
+<body>
+    <section class="login-section">
+        <article class="header-article">
+            <div class="main-logo"></div>
+            <h1>회원가입</h1>
+        </article>
+        <article class="login-form">
+            <form action="/signup" method="POST">
+                <label class="IDandPW" id="userID">
+                    <input type="email" id="userID" name="email" placeholder="Email" required>
+                    <div class="clearBtn"></div>
+                </label>
+                <label class="IDandPW" id="userPW">
+                    <input type="password" id="userPassword" name="password" placeholder="Password" required>
+                    <div class="clearBtn"></div>
+                </label>
+                <label class="IDandPW" id="userPWC">
+                    <input type="password" id="userPassword" name="password_check" placeholder="Password check" required>
+                    <div class="clearBtn"></div>
+                </label>
+                <label class="IDandPW" id="userNAME">
+                    <input type="text" id="userID" name="name" placeholder="Name" required>
+                    <div class="clearBtn"></div>
+                </label>
+
+                <button type="submit" id="btn-signin">회원가입</button>
+            </form>
+        </article>
+        <article class="footer-article">
+            <a onclick=" location.href='/login'">로그인 하러가기</a>
+        </article>
+    </section>
+</body>
+</html>
